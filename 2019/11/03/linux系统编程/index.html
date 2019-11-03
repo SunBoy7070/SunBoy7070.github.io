@@ -1,19 +1,91 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+
+
 
   
-  <title>linux系统编程 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="linux系统编程[TOC] 1 shell编程1.1 shell概述shell的两层含义：   既是一种应用程序,又是一种程序设计语言 1.1.1 作为应用程序​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能 称之为shell命令解析器shell是用户和Linux内核之间的接口程序用户在提示符下输入的命令都由shell先解释然后传给Linux核">
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="linux系统编程[TOC] 1 shell编程1.1 shell概述shell的两层含义：   既是一种应用程序,又是一种程序设计语言 1.1.1 作为应用程序​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能 称之为shell命令解析器shell是用户和Linux内核之间的接口程序用户在提示符下输入的命令都由shell先解释然后传给Linux核">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux系统编程">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="linux系统编程[TOC] 1 shell编程1.1 shell概述shell的两层含义：   既是一种应用程序,又是一种程序设计语言 1.1.1 作为应用程序​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能 称之为shell命令解析器shell是用户和Linux内核之间的接口程序用户在提示符下输入的命令都由shell先解释然后传给Linux核">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148818086.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148843715.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562150743753.png">
@@ -52,73 +124,254 @@
 <meta property="og:updated_time" content="2019-08-29T02:19:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148818086.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/03/linux系统编程/"/>
+
+
+
+
+
+  <title>linux系统编程 | Hexo</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-linux系统编程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" class="article-date">
-  <time datetime="2019-11-03T06:15:39.459Z" itemprop="datePublished">2019-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
-    <h1 class="article-title" itemprop="name">
-      linux系统编程
-    </h1>
+  
+    
   
 
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">linux系统编程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T21:07:12+08:00">
+                2019-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <h1 id="linux系统编程"><a href="#linux系统编程" class="headerlink" title="linux系统编程"></a>linux系统编程</h1><p>[TOC]</p>
 <h2 id="1-shell编程"><a href="#1-shell编程" class="headerlink" title="1 shell编程"></a>1 shell编程</h2><h3 id="1-1-shell概述"><a href="#1-1-shell概述" class="headerlink" title="1.1 shell概述"></a>1.1 shell概述</h3><p>shell的两层含义：<br>   既是一种应用程序,又是一种程序设计语言</p>
@@ -1361,101 +1614,360 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" data-id="ck2im5dat0001houeado8876j" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/03/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
       
       
     </footer>
   </div>
   
-    
-<nav id="article-nav">
   
   
-    <a href="/2019/11/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+  </article>
 
-  
-</article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    <div class="post-spread">
+      
     </div>
   </div>
 
 
+          </div>
+          
+
+
+          
+
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+
+
+
+        </div>
         
-          <li>
-            <a href="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/">linux系统编程</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/03/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
-  
-</aside>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux系统编程"><span class="nav-number">1.</span> <span class="nav-text">linux系统编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-shell编程"><span class="nav-number">1.1.</span> <span class="nav-text">1 shell编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-shell概述"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 shell概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-作为应用程序"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.1.1 作为应用程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-作为程序设计语言"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">1.1.2 作为程序设计语言</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-shell语法"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 shell语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1-脚本的定义与执行"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1 脚本的定义与执行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-变量"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.2 变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-条件测试语句"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">1.2.3 条件测试语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3-控制语句"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">1.2.3 控制语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-4-函数"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">1.2.4 函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-linux文件IO操作"><span class="nav-number">1.2.</span> <span class="nav-text">2 linux文件IO操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-系统调用"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 系统调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-文件描述符"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 文件描述符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-文件打开读写关闭"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 文件打开读写关闭</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-打开文件open"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">2.3.1 打开文件open</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-关闭文件close"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">2.3.2 关闭文件close</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-向文件写数据write"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">2.3.3 向文件写数据write</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-从文件读数据read"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">2.3.4 从文件读数据read</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-文件的阻塞特性"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 文件的阻塞特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-获取文件状态信息"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 获取文件状态信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-文件目录操作"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6 文件目录操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-linux多任务编程之进程"><span class="nav-number">1.3.</span> <span class="nav-text">3 linux多任务编程之进程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-进程的概念"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 进程的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-进程的状态"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 进程的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-进程号"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 进程号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-fork创建进程"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 fork创建进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-回收子进程资源"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.5 回收子进程资源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-1-wait函数"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">3.5.1 wait函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-2-waitpid函数"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">3.5.2 waitpid函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-僵尸进程孤儿进程守护进程"><span class="nav-number">1.3.6.</span> <span class="nav-text">3.6 僵尸进程孤儿进程守护进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-vfork创建进程"><span class="nav-number">1.3.7.</span> <span class="nav-text">3.7 vfork创建进程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-exec进程的替换"><span class="nav-number">1.3.8.</span> <span class="nav-text">3.8 exec进程的替换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-linux进程间通信之无名管道"><span class="nav-number">1.4.</span> <span class="nav-text">4 linux进程间通信之无名管道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-无名管道概述"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 无名管道概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-无名管道创建和使用"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 无名管道创建和使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-无名管道读写的特点"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 无名管道读写的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-linux进程间通信之有名管道"><span class="nav-number">1.5.</span> <span class="nav-text">5 linux进程间通信之有名管道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-有名管道的特点"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 有名管道的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-有名管道创建和使用"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 有名管道创建和使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-有名管道读写的特点"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 有名管道读写的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-linux进程间通信之消息队列"><span class="nav-number">1.6.</span> <span class="nav-text">6 linux进程间通信之消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-消息队列概述"><span class="nav-number">1.6.1.</span> <span class="nav-text">6.1 消息队列概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-消息队列创建和使用"><span class="nav-number">1.6.2.</span> <span class="nav-text">6.2 消息队列创建和使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-linux进程间通信之mmap"><span class="nav-number">1.7.</span> <span class="nav-text">7 linux进程间通信之mmap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-mmap原理"><span class="nav-number">1.7.1.</span> <span class="nav-text">7.1 mmap原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-mmap使用"><span class="nav-number">1.7.2.</span> <span class="nav-text">7.2 mmap使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-linux进程间通信之共享内存"><span class="nav-number">1.8.</span> <span class="nav-text">8 linux进程间通信之共享内存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-共享内存原理"><span class="nav-number">1.8.0.1.</span> <span class="nav-text">8.1 共享内存原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-共享内存的创建和使用"><span class="nav-number">1.8.0.2.</span> <span class="nav-text">8.2 共享内存的创建和使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-linux进程间通信之信号"><span class="nav-number">1.9.</span> <span class="nav-text">9 linux进程间通信之信号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-信号概述"><span class="nav-number">1.9.1.</span> <span class="nav-text">9.1 信号概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-信号的产生与动作"><span class="nav-number">1.9.2.</span> <span class="nav-text">9.2 信号的产生与动作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-未决信号集合信号阻塞集"><span class="nav-number">1.9.3.</span> <span class="nav-text">9.3 未决信号集合信号阻塞集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-发送信号API"><span class="nav-number">1.9.4.</span> <span class="nav-text">9.4 发送信号API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-修改信号的处理动作"><span class="nav-number">1.9.5.</span> <span class="nav-text">9.5 修改信号的处理动作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-信号集"><span class="nav-number">1.9.6.</span> <span class="nav-text">9.6 信号集</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-linux多任务编程之线程"><span class="nav-number">1.10.</span> <span class="nav-text">10 linux多任务编程之线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-线程概述"><span class="nav-number">1.10.1.</span> <span class="nav-text">10.1 线程概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-线程的创建"><span class="nav-number">1.10.2.</span> <span class="nav-text">10.2 线程的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-回收线程资源"><span class="nav-number">1.10.3.</span> <span class="nav-text">10.3 回收线程资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-线程的退出和取消"><span class="nav-number">1.10.4.</span> <span class="nav-text">10.4 线程的退出和取消</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-线程的属性-了解"><span class="nav-number">1.10.5.</span> <span class="nav-text">10.5 线程的属性(了解)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-linux线程间的同步与互斥"><span class="nav-number">1.11.</span> <span class="nav-text">11 linux线程间的同步与互斥</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-同步与互斥概述"><span class="nav-number">1.11.1.</span> <span class="nav-text">11.1 同步与互斥概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-互斥锁"><span class="nav-number">1.11.2.</span> <span class="nav-text">11.2 互斥锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-死锁"><span class="nav-number">1.11.3.</span> <span class="nav-text">11.3 死锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-读写锁"><span class="nav-number">1.11.4.</span> <span class="nav-text">11.4 读写锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-条件变量"><span class="nav-number">1.11.5.</span> <span class="nav-text">11.5 条件变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-6-信号量"><span class="nav-number">1.11.6.</span> <span class="nav-text">11.6 信号量</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-      <footer id="footer">
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
