@@ -5,14 +5,53 @@
   
 
   
-  <title>Hexo</title>
+  <title>linux系统编程 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="linux系统编程[TOC] 1 shell编程1.1 shell概述shell的两层含义：   既是一种应用程序,又是一种程序设计语言 1.1.1 作为应用程序​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能 称之为shell命令解析器shell是用户和Linux内核之间的接口程序用户在提示符下输入的命令都由shell先解释然后传给Linux核">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux系统编程">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="linux系统编程[TOC] 1 shell编程1.1 shell概述shell的两层含义：   既是一种应用程序,又是一种程序设计语言 1.1.1 作为应用程序​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能 称之为shell命令解析器shell是用户和Linux内核之间的接口程序用户在提示符下输入的命令都由shell先解释然后传给Linux核">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148818086.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148843715.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562150743753.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562150869413.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562151884513.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152005010.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152180783.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152275223.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152335696.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562211276422.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224398265.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224438938.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224605074.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224871507.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562225021136.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562227954935.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562229773072.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562229913108.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562230481193.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562230818694.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562231094936.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562231172305.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562231575174.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562232412175.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562232612771.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562232892227.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562235714540.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562235818789.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562235949570.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562237717322.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562238388218.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562239158898.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562239440165.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562242560834.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562242592554.png">
+<meta property="og:updated_time" content="2019-08-29T02:19:50.000Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148818086.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +98,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-linux系统编程" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-linux系统编程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" class="article-date">
   <time datetime="2019-11-03T06:15:39.459Z" itemprop="datePublished">2019-11-03</time>
@@ -74,8 +111,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/">linux系统编程</a>
+    <h1 class="article-title" itemprop="name">
+      linux系统编程
     </h1>
   
 
@@ -1331,60 +1368,19 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/03/hello-world/" class="article-date">
-  <time datetime="2019-11-03T04:30:02.456Z" itemprop="datePublished">2019-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/03/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2019/11/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/03/hello-world/" data-id="ck2im5d8h0000houe7fflax5k" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
