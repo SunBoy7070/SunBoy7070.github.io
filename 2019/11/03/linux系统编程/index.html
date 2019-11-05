@@ -14,44 +14,44 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="linux系统编程[TOC] 1 shell编程1.1 shell概述shell的两层含义：   既是一种应用程序,又是一种程序设计语言 1.1.1 作为应用程序​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能 称之为shell命令解析器shell是用户和Linux内核之间的接口程序用户在提示符下输入的命令都由shell先解释然后传给Linux核">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562148818086.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562148843715.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562150743753.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562150869413.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562151884513.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562152005010.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562152180783.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562152275223.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562152335696.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562211276422.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562224398265.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562224438938.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562224605074.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562224871507.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562225021136.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562227954935.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562229773072.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562229913108.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562230481193.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562230818694.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562231094936.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562231172305.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562231575174.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562232412175.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562232612771.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562232892227.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562235714540.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562235818789.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562235949570.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562237717322.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562238388218.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562239158898.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562239440165.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562242560834.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562242592554.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148818086.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148843715.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562150743753.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562150869413.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562151884513.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152005010.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152180783.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152275223.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562152335696.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562211276422.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224398265.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224438938.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224605074.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562224871507.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562225021136.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562227954935.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562229773072.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562229913108.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562230481193.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562230818694.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562231094936.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562231172305.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562231575174.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562232412175.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562232612771.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562232892227.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562235714540.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562235818789.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562235949570.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562237717322.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562238388218.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562239158898.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562239440165.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562242560834.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562242592554.png">
 <meta property="og:updated_time" content="2019-08-29T02:19:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;assets%5C1562148818086.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;03&#x2F;linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B&#x2F;assets%5C1562148818086.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -124,9 +124,9 @@
 <h2 id="1-shell编程"><a href="#1-shell编程" class="headerlink" title="1 shell编程"></a>1 shell编程</h2><h3 id="1-1-shell概述"><a href="#1-1-shell概述" class="headerlink" title="1.1 shell概述"></a>1.1 shell概述</h3><p>shell的两层含义：<br>   既是一种应用程序,又是一种程序设计语言</p>
 <h4 id="1-1-1-作为应用程序"><a href="#1-1-1-作为应用程序" class="headerlink" title="1.1.1 作为应用程序"></a>1.1.1 作为应用程序</h4><p>​       交互式地解释、执行用户输入的命令，将用户的操作翻译成机器可以识别的语言，完成相应功能</p>
 <p>称之为shell命令解析器<br>shell是用户和Linux内核之间的接口程序<br>用户在提示符下输入的命令都由shell先解释然后传给Linux核心<br>它调用了系统核心的大部分功能来执行程序、并以并行的方式协调各个程序的运行<br>Linux系统中提供了好几种不同的shell命令解释器，如sh、ash、bash等。一般默认使用bash作为默认的解释器。我们后面编写的shell脚本，都是由上述shell命令解释器解释执行的。</p>
-<p><img src="/.com//assets%5C1562148818086.png" alt="1562148818086"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562148818086.png" alt="1562148818086"></p>
 <p>shell是用户跟内核通信几种方式的一种</p>
-<p><img src="/.com//assets%5C1562148843715.png" alt="1562148843715"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562148843715.png" alt="1562148843715"></p>
 <h4 id="1-1-2-作为程序设计语言"><a href="#1-1-2-作为程序设计语言" class="headerlink" title="1.1.2 作为程序设计语言"></a>1.1.2 作为程序设计语言</h4><p>它定义了各种变量和参数，并提供了许多在高级语言中才具有的控制结构，包括循环和分支<br>       完成类似于windows下批处理操作，简化我们对系统的管理与应用程序的部署</p>
 <p>称之为shell脚本<br>我们学过的c/c++等语言，属于编译性语言（编写完成后需要使用编译器完成编译、汇编、链接等过程变为二进制代码方可执行）<br>shell脚本是一种脚本语言，我们只需使用任意文本编辑器，按照语法编写相应程序，增加可执行权限，即可在安装shell命令解释器的环境下执行<br>shell脚本主要用于：<br>帮助开发人员或系统管理员将复杂而又反复的操作放在一个文件中，通过简单的一步执行操作完成相应任务，从而解放他们的负担</p>
 <p>shell应用举例：<br>1、《linux常用命令_练习.txt》<br>    我们前面完成了这个练习，步骤很多，其实我们只需要将所有操作写入一个文件——cmd.sh(名字跟后缀可任取，为了便于区分我们一般写为*.sh形式)<br>然后:<br>    chmod +x cmd.sh<br>    ./cmd.sh直接执行即可<br>2、假设我们要完成以下任务：<br>     判断用户家目录下（~）下面有没有一个叫test的文件夹<br>     如果没有，提示按y创建并进入此文件夹，按n退出<br>     如果有，直接进入，提示请输入一个字符串，并按此字符串创建一个文件，如果此文件已存在，提示重新输入，重复三次自动退出，不存在创建完毕，退出</p>
@@ -236,7 +236,7 @@ VARNAME=value ；export VARNAME</code></pre><p>传统上，所有环境变量均
 -gt 数1大于数2       
 -ge 数1大于等于数2
 -le 数1小于等于数2
--lt 数1小于数2</code></pre><p><img src="/.com//assets%5C1562150743753.png" alt="1562150743753"></p>
+-lt 数1小于数2</code></pre><p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562150743753.png" alt="1562150743753"></p>
 <p>例：8_test_num.sh</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">echo "please input a num(1-9)"</span><br><span class="line">read num</span><br><span class="line">[ $num -eq 5 ]</span><br><span class="line">echo $?</span><br><span class="line">[ $num -ne 5 ]</span><br><span class="line">echo $?</span><br><span class="line">[ $num -gt 5 ]</span><br><span class="line">echo $?</span><br><span class="line">[ $num -ge 5 ]</span><br><span class="line">echo $?</span><br><span class="line">[ $num -le 5 ]</span><br><span class="line">echo $?</span><br><span class="line">[ $num -lt 5 ]</span><br><span class="line">echo $?</span><br></pre></td></tr></table></figure>
 
@@ -249,7 +249,7 @@ VARNAME=value ；export VARNAME</code></pre><p>传统上，所有环境变量均
 <p>命令执行控制:<br>&amp;&amp;：<br>command1 &amp;&amp; command2<br>   &amp;&amp;左边命令（command1）执行成功(即返回0）shell才执行&amp;&amp;右边的命令（command2）<br>||</p>
 <pre><code>command1 || command2</code></pre><p>  ||左边的命令（command1）未执行成功(即返回非0）shell才执行||右边的命令（command2）<br>例：<br>test -e /home &amp;&amp; test -d /home &amp;&amp; echo “true”<br>test 2 -lt 3 &amp;&amp; test 5 -gt 3 &amp;&amp; echo “equal”<br>test “aaa” = “aaa” || echo “not equal” &amp;&amp; echo “equal”</p>
 <p>多重条件判定</p>
-<p><img src="/.com//assets%5C1562150869413.png" alt="1562150869413"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562150869413.png" alt="1562150869413"></p>
 </li>
 </ol>
 <h4 id="1-2-3-控制语句"><a href="#1-2-3-控制语句" class="headerlink" title="1.2.3 控制语句"></a>1.2.3 控制语句</h4><ol>
@@ -348,7 +348,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <h2 id="2-linux文件IO操作"><a href="#2-linux文件IO操作" class="headerlink" title="2 linux文件IO操作"></a>2 linux文件IO操作</h2><h3 id="2-1-系统调用"><a href="#2-1-系统调用" class="headerlink" title="2.1 系统调用"></a>2.1 系统调用</h3><p>系统调用，顾名思义，说的是操作系统提供给用户程序调用的一组“特殊”接口。用户程序可以通过这组“特殊”接口来获得操作系统内核提供的服务，比如用户可以通过文件系统相关的调用请求系统打开文件、关闭文件或读写文件，可以通过时钟相关的系统调用获得系统时间或设置定时器等。</p>
 <p>从逻辑上来说，系统调用可被看成是一个内核与用户空间程序交互的接口——它好比一个中间人，把用户进程的请求传达给内核，待内核把请求处理完毕后再将处理结果送回给用户空间。</p>
-<p><img src="/.com//assets%5C1562151884513.png" alt="1562151884513"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562151884513.png" alt="1562151884513"></p>
 <p>系统服务之所以需要通过系统调用来提供给用户空间的根本原因是为了对系统进行“保护”，因为我们知道 Linux 的运行空间分为内核空间与用户空间，它们各自运行在不同的级别中，逻辑上相互隔离。</p>
 <p>所以用户进程在通常情况下不允许访问内核数据，也无法使用内核函数，它们只能在用户空间操作用户数据，调用用户空间函数。</p>
 <p>比如我们熟悉的“hello world”程序（执行时）就是标准的用户空间进程，它使用的打印函数 printf 就属于用户空间函数，打印的字符“hello word”字符串也属于用户空间数据。</p>
@@ -363,10 +363,10 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <p>不需要切换到内核空间即可完成函数全部功能，并且将结果反馈给应用程序，如strcpy、bzero 等字符串操作函数。</p>
 <p>2 需要调用系统调用</p>
 <p>需要切换到内核空间，这类函数通过封装系统调用去实现相应功能，如 printf、fread等。</p>
-<p><img src="/.com//assets%5C1562152005010.png" alt="1562152005010"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562152005010.png" alt="1562152005010"></p>
 <p>系统调用是需要时间的，程序中频繁的使用系统调用会降低程序的运行效率。当运行内核代码时，CPU工作在内核态，在系统调用发生前需要保存用户态的栈和内存环境，然后转入内核态工作。系统调用结束后，又要切换回用户态。这种环境的切换会消耗掉许多时间 。</p>
 <p><strong>C库中IO函数工作流程</strong></p>
-<p><img src="/.com//assets%5C1562152180783.png" alt="1562152180783"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562152180783.png" alt="1562152180783"></p>
 <p>库函数访问文件的时候根据需要，设置不同类型的缓冲区，从而减少了直接调用 IO 系统调用的次数，提高了访问效率。</p>
 <p>这个过程类似于快递员给某个区域（内核空间）送快递一样，快递员有两种方式送：</p>
 <p>1）来一件快递就马上送到目的地，来一件送一件，这样导致来回走比较频繁（系统调用）</p>
@@ -374,9 +374,9 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <h3 id="2-2-文件描述符"><a href="#2-2-文件描述符" class="headerlink" title="2.2 文件描述符"></a>2.2 文件描述符</h3><p>在 Linux 的世界里，一切设备皆文件。我们可以系统调用中 I/O 的函数（I：input，输入；O：output，输出），对文件进行相应的操作（ open()、close()、write() 、read() 等）。</p>
 <p>打开现存文件或新建文件时，系统（内核）会返回一个文件描述符，文件描述符用来指定已打开的文件。这个文件描述符相当于这个已打开文件的标号，文件描述符是非负整数，是文件的标识，操作这个文件描述符相当于操作这个描述符所指定的文件。</p>
 <p>程序运行起来后（每个进程）都有一张文件描述符的表，标准输入、标准输出、标准错误输出设备文件被打开，对应的文件描述符 0、1、2 记录在表中。程序运行起来后这三个文件描述符是默认打开的。</p>
-<p><img src="/.com//assets%5C1562152275223.png" alt="1562152275223"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562152275223.png" alt="1562152275223"></p>
 <p>在程序运行起来后打开其他文件时，系统会返回文件描述符表中最小可用的文件描述符，并将此文件描述符记录在表中。</p>
-<p><img src="/.com//assets%5C1562152335696.png" alt="1562152335696"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562152335696.png" alt="1562152335696"></p>
 <p><strong>最大打开的文件个数</strong></p>
 <p>Linux 中一个进程最多只能打开 NR_OPEN_DEFAULT （即1024）个文件，故当文件不再使用时应及时调用 close() 函数关闭文件。</p>
 <p>查看当前系统允许打开最大文件个数：</p>
@@ -560,7 +560,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">stat</span> &#123;</span></span><br><span class="line">    <span class="keyword">dev_t</span>           st_dev;     <span class="comment">//文件的设备编号</span></span><br><span class="line">    <span class="keyword">ino_t</span>           st_ino;     <span class="comment">//节点</span></span><br><span class="line">    <span class="keyword">mode_t</span>          st_mode;            <span class="comment">//文件的类型和存取的权限</span></span><br><span class="line">    <span class="keyword">nlink_t</span>         st_nlink;       <span class="comment">//连到该文件的硬连接数目，刚建立的文件值为1</span></span><br><span class="line">    <span class="keyword">uid_t</span>           st_uid;     <span class="comment">//用户ID</span></span><br><span class="line">    <span class="keyword">gid_t</span>           st_gid;     <span class="comment">//组ID</span></span><br><span class="line">    <span class="keyword">dev_t</span>           st_rdev;        <span class="comment">//(设备类型)若此文件为设备文件，则为其设备编号</span></span><br><span class="line">    <span class="keyword">off_t</span>           st_size;        <span class="comment">//文件字节数(文件大小)</span></span><br><span class="line">    <span class="keyword">blksize_t</span>       st_blksize;     <span class="comment">//块大小(文件系统的I/O 缓冲区大小)</span></span><br><span class="line">    <span class="keyword">blkcnt_t</span>        st_blocks;      <span class="comment">//块数</span></span><br><span class="line">    <span class="keyword">time_t</span>          st_atime;       <span class="comment">//最后一次访问时间</span></span><br><span class="line">    <span class="keyword">time_t</span>          st_mtime;       <span class="comment">//最后一次修改时间</span></span><br><span class="line">    <span class="keyword">time_t</span>          st_ctime;       <span class="comment">//最后一次改变时间(指属性)</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>st_mode(16位整数)参数说明 :</p>
-<p><img src="/.com//assets%5C1562211276422.png" alt="1562211276422"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562211276422.png" alt="1562211276422"></p>
 <p>判断文件类型:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">stat</span> <span class="title">buf</span>;</span></span><br><span class="line">    stat(<span class="string">"a.txt"</span>, &amp;buf);</span><br><span class="line">    <span class="keyword">if</span> (S_ISREG(buf.st_mode))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, <span class="string">"这是普通文件"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -601,18 +601,18 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <p><strong>单道、多道程序设计(了解)</strong><br>1 单道程序设计<br>所有进程一个一个排队执行。若A阻塞，B只能等待，即使CPU处于空闲状态。而在人机交互时阻塞的出现是必然的。所有这种模型在系统资源利用上及其不合理，在计算机发展历史上存在不久，大部分便被淘汰了。<br>2 多道程序设计<br>在计算机内存中同时存放几道相互独立的程序，它们在管理程序控制之下，相互穿插的运行。多道程序设计必须有硬件基础作为保证。<br>在计算机中时钟中断即为多道程序设计模型的理论基础。并发时，任意进程在执行期间都不希望放弃cpu。因此系统需要一种强制让进程让出cpu资源的手段。时钟中断有硬件基础作为保障，对进程而言不可抗拒。 操作系统中的中断处理函数，来负责调度程序执行。<br>在多道程序设计模型中，多个进程轮流使用CPU (分时复用CPU资源)。而当下常见CPU为纳秒级，1秒可以执行大约10亿条指令。由于人眼的反应速度是毫秒级，所以看似同时在运行。<br>1s = 1000ms<br>1ms = 1000us<br>1us = 1000ns<br>1s = 1000000000ns</p>
 <p><strong>并行和并发(理解)</strong></p>
 <p><strong>并行(parallel)：</strong>指在同一时刻，有多条指令在多个处理器上同时执行。 </p>
-<p><img src="/.com//assets%5C1562224398265.png" alt="1562224398265"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562224398265.png" alt="1562224398265"></p>
 <p><strong>并发(concurrency)</strong>：指在同一时刻只能有一条指令执行，但多个进程指令被快速的轮换执行，使得在宏观上具有多个进程同时执行的效果，但在微观上并不是同时执行的，只是把时间分成若干段，使多个进程快速交替的执行。 </p>
-<p><img src="/.com//assets%5C1562224438938.png" alt="1562224438938"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562224438938.png" alt="1562224438938"></p>
 <p><strong>进程控制块PCB(了解)</strong></p>
 <p>进程运行时，内核为进程每个进程分配一个PCB（进程控制块），维护进程相关的信息，Linux内核的进程控制块是task_struct结构体。</p>
 <p>在 /usr/src/linux-headers-xxx/include/linux/sched.h 文件中可以查看struct task_struct 结构体定义：<br>ubunqu@-:~/share$ vim /usr/src/linux-headers-4.10.0-28/include/linux/sched.h </p>
-<p><img src="/.com//assets%5C1562224605074.png" alt="1562224605074"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562224605074.png" alt="1562224605074"></p>
 <p>其内部成员有很多，我们掌握以下部分即可：<br>进程id。系统中每个进程有唯一的id，在C语言中用pid_t类型表示，其实就是一个非负整数。<br>进程的状态，有就绪、运行、挂起、停止等状态。<br>进程切换时需要保存和恢复的一些CPU寄存器。<br>描述虚拟地址空间的信息。<br>描述控制终端的信息。<br>当前工作目录（Current Working Directory）。<br>umask掩码。<br>文件描述符表，包含很多指向file结构体的指针。<br>和信号相关的信息。<br>用户id和组id。<br>会话（Session）和进程组。<br>进程可以使用的资源上限（Resource Limit）。</p>
 <h3 id="3-2-进程的状态"><a href="#3-2-进程的状态" class="headerlink" title="3.2 进程的状态"></a>3.2 进程的状态</h3><p>进程状态反映进程执行过程的变化。这些状态随着进程的执行和外界条件的变化而转换。<br>在三态模型中，进程状态分为三个基本状态，即运行态，就绪态，阻塞态。<br>在五态模型中，进程分为新建态、终止态，运行态，就绪态，阻塞</p>
-<p><img src="/.com//assets%5C1562224871507.png" alt="1562224871507"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562224871507.png" alt="1562224871507"></p>
 <p>①TASK_RUNNING：进程正在被CPU执行。当一个进程刚被创建时会处于TASK_RUNNABLE，表示己经准备就绪，正等待被调度。<br>②TASK_INTERRUPTIBLE（可中断）：进程正在睡眠（也就是说它被阻塞）等待某些条件的达成。一旦这些条件达成，内核就会把进程状态设置为运行。处于此状态的进程也会因为接收到信号而提前被唤醒，比如给一个TASK_INTERRUPTIBLE状态的进程发送SIGKILL信号，这个进程将先被唤醒（进入TASK_RUNNABLE状态），然后再响应SIGKILL信号而退出（变为TASK_ZOMBIE状态），并不会从TASK_INTERRUPTIBLE状态直接退出。<br>③TASK_UNINTERRUPTIBLE（不可中断）：处于等待中的进程，待资源满足时被唤醒，但不可以由其它进程通过信号或中断唤醒。由于不接受外来的任何信号，因此无法用kill杀掉这些处于该状态的进程。而TASK_UNINTERRUPTIBLE状态存在的意义就在于，内核的某些处理流程是不能被打断的。如果响应异步信号，程序的执行流程中就会被插入一段用于处理异步信号的流程，于是原有的流程就被中断了，这可能使某些设备陷入不可控的状态。处于TASK_UNINTERRUPTIBLE状态一般总是非常短暂的，通过ps命令基本上不可能捕捉到。<br>④TASK_ZOMBIE（僵死）：表示进程已经结束了，但是其父进程还没有调用wait4或waitpid()来释放进程描述符。为了父进程能够获知它的消息，子进程的进程描述符仍然被保留着。一旦父进程调用了wait4()，进程描述符就会被释放。<br>⑤TASK_STOPPED（停止）：进程停止执行。当进程接收到SIGSTOP，SIGTSTP，SIGTTIN，SIGTTOU等信号的时候。此外，在调试期间接收到任何信号，都会使进程进入这种状态。当接收到SIGCONT信号，会重新回到TASK_RUNNABLE。<br>如何查看进程状态：  ps   aux</p>
-<p><img src="/.com//assets%5C1562225021136.png" alt="1562225021136"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562225021136.png" alt="1562225021136"></p>
 <p>stat中的参数意义如下：</p>
 <table>
 <thead>
@@ -718,7 +718,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <p><strong>fork出来的子进程和父进程之间的关系:</strong></p>
 <p>使用fork函数得到的子进程是父进程的一个复制品，它从父进程处继承了整个进程的地址空间。<br>地址空间:<br>      包括进程上下文、进程堆栈、打开的文件描述符、信号控制设定、进程优先级、进程组号等。<br>子进程所独有的只有它的进程号，计时器等。因此，使用fork函数的代价是很大的.</p>
-<p><img src="/.com//assets%5C1562227954935.png" alt="1562227954935"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562227954935.png" alt="1562227954935"></p>
 <p>示例代码:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">pid_t</span> pid;</span><br><span class="line">	pid = fork();</span><br><span class="line">	<span class="keyword">if</span>(pid &lt; <span class="number">0</span>)</span><br><span class="line">		perror(<span class="string">""</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(pid == <span class="number">0</span>)<span class="comment">//子进程pid返回值=0</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"I am child process\n"</span>);</span><br><span class="line">			sleep(<span class="number">1</span>);</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span><span class="comment">//父进程的pid&gt;0</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"I am father process\n"</span>);</span><br><span class="line">			sleep(<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -748,14 +748,14 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <p><strong>进程组</strong><br>进程组，也称之为作业。BSD于1980年前后向Unix中增加的一个新特性。代表一个或多个进程的集合。<br>每个进程都属于一个进程组。在waitpid函数和kill函数的参数中都曾使用到。操作系统设计的进程组的概念，是为了简化对多个进程的管理。<br>当父进程，创建子进程的时候，默认子进程与父进程属于同一进程组。进程组ID为第一个进程ID(组长进程)。所以，组长进程标识：其进程组ID为其进程ID</p>
 <p>可以使用kill -SIGKILL -进程组ID(负的)来将整个进程组内的进程全部杀死：</p>
-<p><img src="/.com//assets%5C1562229773072.png" alt="1562229773072"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562229773072.png" alt="1562229773072"></p>
 <p>组长进程可以创建一个进程组，创建该进程组中的进程，然后终止。只要进程组中有一个进程存在，进程组就存在，与组长进程是否终止无关。<br>进程组生存期：进程组创建到最后一个进程离开(终止或转移到另一个进程组)。<br>一个进程可以为自己或子进程设置进程组ID。</p>
 <p>相关函数说明:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="keyword">pid_t</span> getpgrp(<span class="keyword">void</span>);                 <span class="comment">/* POSIX.1 version */</span></span><br><span class="line">功能：获取当前进程的进程组ID</span><br><span class="line">参数：无</span><br><span class="line">返回值：总是返回调用者的进程组ID</span><br><span class="line"><span class="keyword">pid_t</span> getpgid(<span class="keyword">pid_t</span> pid);</span><br><span class="line">功能：获取指定进程的进程组ID</span><br><span class="line">参数：</span><br><span class="line">    pid：进程号，如果pid = <span class="number">0</span>，那么该函数作用和getpgrp一样</span><br><span class="line">返回值：</span><br><span class="line">    成功：进程组ID</span><br><span class="line">    失败：<span class="number">-1</span></span><br><span class="line"><span class="keyword">int</span> setpgid(<span class="keyword">pid_t</span> pid, <span class="keyword">pid_t</span> pgid)</span><br><span class="line">功能：</span><br><span class="line">    改变进程默认所属的进程组。通常可用来加入一个现有的进程组或创建一个新进程组。</span><br><span class="line">参数：</span><br><span class="line">    将参<span class="number">1</span>对应的进程，加入参<span class="number">2</span>对应的进程组中</span><br><span class="line">返回值：</span><br><span class="line">    成功：<span class="number">0</span></span><br><span class="line">    失败：<span class="number">-1</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>会话(了解)</strong></p>
 <p>会话是一个或多个进程组的集合。<br>一个会话可以有一个控制终端。这通常是终端设备或伪终端设备；<br>建立与控制终端连接的会话首进程被称为控制进程；<br>一个会话中的几个进程组可被分为一个前台进程组以及一个或多个后台进程组；<br>如果一个会话有一个控制终端，则它有一个前台进程组，其它进程组为后台进程组；<br>如果终端接口检测到断开连接，则将挂断信号发送至控制进程（会话首进程）。</p>
-<p><img src="/.com//assets%5C1562229913108.png" alt="1562229913108"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562229913108.png" alt="1562229913108"></p>
 <p>创建会话注意事项</p>
 <p>1) 调用进程不能是进程组组长，该进程变成新会话首进程(session header)<br>2) 该调用进程是组长进程，则出错返回<br>3) 该进程成为一个新进程组的组长进程<br>4) 需有root权限(ubuntu不需要)<br>5) 新会话丢弃原有的控制终端，该会话没有控制终端<br>6) 建立新会话时，先调用fork, 父进程终止，子进程调用setsid</p>
 <p>API函数介绍<br>getsid函数：</p>
@@ -771,7 +771,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pid_t</span> vfork(<span class="keyword">void</span>)</span><br><span class="line">	功能：</span><br><span class="line">		vfork函数和fork函数一样都是在已有的进程中创建一个新的进程，但它们创建的子进程是有区别的。</span><br><span class="line">	返回值:</span><br><span class="line">		创建子进程成功，则在子进程中返回<span class="number">0</span>,父进程中返回子进程ID。出错则返回<span class="number">-1</span>。</span><br></pre></td></tr></table></figure>
 
 <p>fork和vfork函数的区别：<br>vfork保证子进程先运行，在它调用exec或exit之后，父进程才可能被调度运行。<br>vfork和fork一样都创建一个子进程，但它并不将父进程的地址空间完全复制到子进程中，因为子进程会立即调用exec(或exit)，于是也就不访问该地址空间。相反，在子进程中调用exec或exit之前，它在父进程的地址空间中运行，在exec之后子进程会有自己的进程空间。</p>
-<p><img src="/.com//assets%5C1562230481193.png" alt="1562230481193"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562230481193.png" alt="1562230481193"></p>
 <p>代码示例:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">pid_t</span> pid;</span><br><span class="line">	pid = vfork();</span><br><span class="line">	<span class="keyword">if</span>(pid &lt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		perror(<span class="string">""</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(pid == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		sleep(<span class="number">5</span>);</span><br><span class="line">		<span class="comment">//子进程exec 或exit之前的代码运行在父进程的地址空间</span></span><br><span class="line">		execlp(<span class="string">"ls"</span>,<span class="string">"ls"</span>,<span class="literal">NULL</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);<span class="comment">// 退出进程 防止execl执行失败,运行至return</span></span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// 父进程vfrok之后会等待子进程退出或者调用exec,之后才</span></span><br><span class="line">		<span class="comment">// 开始调用运行</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"hello vfork\n"</span>);</span><br><span class="line">		<span class="keyword">while</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -788,14 +788,14 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <p>p(path)<br>        按PATH环境变量指定的目录搜索可执行文件。<br>        以p结尾的exec函数取文件名做为参数。当指定filename作为参数时，若filename中包含/，则将其视为路径名，并直接到指定的路径中执行程序。<br>e(environment)：<br>        存有环境变量字符串地址的指针数组的地址。execle和execve改变的是exec启动的程序的环境变量（新的环境变量完全由environment指定），其他四个函数启动的程序则使用默认系统环境变量。</p>
 <p>exec函数族与一般的函数不同，exec函数族中的函数执行成功后不会返回。只有调用失败了，它们才会返回－1。失败后从原程序的调用点接着往下执行。<br>在平时的编程中，如果用到了exec函数族，一定要记得加错误判断语句。</p>
 <p>exec函数族取代调用进程的数据段、代码段和堆栈段。</p>
-<p><img src="/.com//assets%5C1562230818694.png" alt="1562230818694"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562230818694.png" alt="1562230818694"></p>
 <p>一个进程调用exec后，除了进程ID，进程还保留了下列特征不变：<br>父进程号<br>进程组号<br>控制终端<br>根目录<br>当前工作目录<br>进程信号屏蔽集<br>未处理信号<br>…</p>
 <h2 id="4-linux进程间通信之无名管道"><a href="#4-linux进程间通信之无名管道" class="headerlink" title="4 linux进程间通信之无名管道"></a>4 linux进程间通信之无名管道</h2><h3 id="4-1-无名管道概述"><a href="#4-1-无名管道概述" class="headerlink" title="4.1 无名管道概述"></a>4.1 无名管道概述</h3><p>管道(pipe)又称无名管道。<br>无名管道是一种特殊类型的文件，在应用层体现为两个打开的文件描述符。</p>
-<p><img src="/.com//assets%5C1562231094936.png" alt="1562231094936"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562231094936.png" alt="1562231094936"></p>
 <p>管道是最古老的UNIX IPC方式，其<strong>特点</strong>是:<br>1、半双工，数据在同一时刻只能在一个方向上流动。<br>2、数据只能从管道的一端写入，从另一端读出。<br>3、写入管道中的数据遵循先入先出的规则。<br>4、管道所传送的数据是无格式的，这要求管道的读出方与写入方必须事先约定好数据的格式，如多少字节算一个消息等。<br>5、管道不是普通的文件，不属于某个文件系统，其只存在于内存中。<br>6、管道在内存中对应一个缓冲区。不同的系统其大小不一定相同。<br>7、从管道读数据是一次性操作，数据一旦被读走，它就从管道中被抛弃，释放空间以便写更多的数据。<br>8、管道没有名字，只能在具有公共祖先的进程之间使用。 </p>
 <h3 id="4-2-无名管道创建和使用"><a href="#4-2-无名管道创建和使用" class="headerlink" title="4.2 无名管道创建和使用"></a>4.2 无名管道创建和使用</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">pipe</span><span class="params">(<span class="keyword">int</span> filedes[<span class="number">2</span>])</span></span>;</span><br><span class="line">	功能：经由参数filedes返回两个文件描述符</span><br><span class="line">	参数：</span><br><span class="line">filedes为<span class="keyword">int</span>型数组的首地址，其存放了管道的文件描述符fd[<span class="number">0</span>]、fd[<span class="number">1</span>]。</span><br><span class="line">filedes[<span class="number">0</span>]为读而打开，filedes[<span class="number">1</span>]为写而打开管道，filedes[<span class="number">0</span>]的输出是filedes[<span class="number">1</span>]的输入。</span><br><span class="line">	返回值：</span><br><span class="line">	成功：返回 <span class="number">0</span></span><br><span class="line">	失败：返回<span class="number">-1</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//assets%5C1562231172305.png" alt="1562231172305"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562231172305.png" alt="1562231172305"></p>
 <p>代码示例:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fd[<span class="number">2</span>];</span><br><span class="line">	<span class="keyword">pid_t</span> pid;</span><br><span class="line">	pipe(fd);<span class="comment">//创建管道放到fork之前</span></span><br><span class="line">	pid = fork();</span><br><span class="line">	<span class="keyword">if</span>(pid &lt; <span class="number">0</span>)</span><br><span class="line">		perror(<span class="string">""</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(pid == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		sleep(<span class="number">3</span>);</span><br><span class="line">		<span class="comment">//fd[1]是写端</span></span><br><span class="line">		<span class="built_in">write</span>(fd[<span class="number">1</span>],<span class="string">"hello"</span>,<span class="number">5</span>);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">close</span>(fd[<span class="number">1</span>]);</span><br><span class="line">		<span class="comment">//fd[0] 读端</span></span><br><span class="line">		<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">char</span> buf[<span class="number">256</span>]=<span class="string">""</span>;</span><br><span class="line">			sleep(<span class="number">1</span>);</span><br><span class="line">			<span class="built_in">read</span>(fd[<span class="number">0</span>],buf,<span class="keyword">sizeof</span>(buf));</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"[%s]\n"</span>,buf);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -809,7 +809,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <p>打开FIFO时，非阻塞标志(O_NONBLOCK)产生下列影响:<br>特点二：<br>指定O_NONBLOCK(即open位或O_NONBLOCK)<br>1、先以只读方式打开：如果没有进程已经为写而打开一个FIFO, 只读open成功，并且open不阻塞。<br>2、先以只写方式打开：如果没有进程已经为读而打开一个FIFO，只写open将出错返回-1。<br>3、read、write读写命名管道中读数据时不阻塞。<br>4、通信过程中，读进程退出后，写进程向命名管道内写数据时，写进程也会（收到SIGPIPE信号）退出。<br>注意：<br>open函数以可读可写方式打开FIFO文件时的特点：<br>        1、open不阻塞。<br>        2、调用read函数从FIFO里读数据时read会阻塞。<br>        3、调用write函数向FIFO里写数据，当缓冲区已满时write也会阻塞。</p>
 <p><strong>练习:</strong></p>
 <p>题目：实现单机QQ聊天<br>提示：<br>父进程创建子进程，实现多任务。<br>        父进程负责发信息(向FIFO里写数据)，子进程负责接收信息( 从FIFO里读数据)。<br>打开命名管道的用阻塞的方法打开。</p>
-<p><img src="/.com//assets%5C1562231575174.png" alt="1562231575174"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562231575174.png" alt="1562231575174"></p>
 <h2 id="6-linux进程间通信之消息队列"><a href="#6-linux进程间通信之消息队列" class="headerlink" title="6 linux进程间通信之消息队列"></a>6 linux进程间通信之消息队列</h2><h3 id="6-1-消息队列概述"><a href="#6-1-消息队列概述" class="headerlink" title="6.1 消息队列概述"></a>6.1 消息队列概述</h3><p>消息队列是消息的链表，存放在内存中，由内核维护<br>消息队列的特点<br>1、消息队列中的消息是有类型的。<br>2、消息队列中的消息是有格式的。<br>3、消息队列可以实现消息的随机查询。消息不一定要以先进先出的次序读取，编程时可以按消息的类型读取。<br>4、消息队列允许一个或多个进程向它写入或者读取消息。<br>5、与无名管道、命名管道一样，从消息队列中读出消息，消息队列中对应的数据都会被删除。</p>
 <p>6、每个消息队列都有消息队列标识符，消息队列的标识符在整个系统中是唯一的。</p>
 <p>7、只有内核重启或人工删除消息队列时，该消息队列才会被删除。若不人工删除消息队列，消息队列会一直存在于系统中。</p>
@@ -848,10 +848,10 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">消息结构体类型</span><br><span class="line">	<span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">msg</span></span></span><br><span class="line"><span class="class">	&#123;</span></span><br><span class="line">		<span class="keyword">long</span> type;		<span class="comment">//接收者类型</span></span><br><span class="line">		<span class="keyword">char</span> <span class="built_in">text</span>[<span class="number">100</span>];	<span class="comment">//发送内容</span></span><br><span class="line">		<span class="keyword">char</span> name[<span class="number">20</span>];	<span class="comment">//发送者姓名</span></span><br><span class="line">	&#125;MSG;</span><br></pre></td></tr></table></figure>
 
 <p>每个程序都有两个任务，一个任务是负责接收消息，一个任务是负责发送消息，通过fork创建子进程实现多任务。<br>      一个进程负责接收信息，它只接收某种类型的消息，只要别的进程发送此类型的消息，此进程就能收到。收到后通过消息的name成员就可知道是谁发送的消息。<br>        另一个进程负责发信息，可以通过输入来决定发送消息的类型。<br>        设计程序的时候，接收消息的进程接收消息的类型不一样，这样就实现了发送的消息只被接收此类型消息的人收到，其它人收不到。这样就是实现了给特定的人发送消息。</p>
-<p><img src="/.com//assets%5C1562232412175.png" alt="1562232412175"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562232412175.png" alt="1562232412175"></p>
 <h2 id="7-linux进程间通信之mmap"><a href="#7-linux进程间通信之mmap" class="headerlink" title="7 linux进程间通信之mmap"></a>7 linux进程间通信之mmap</h2><h3 id="7-1-mmap原理"><a href="#7-1-mmap原理" class="headerlink" title="7.1 mmap原理"></a>7.1 mmap原理</h3><p>存储映射I/O (Memory-mapped I/O) 使一个磁盘文件与存储空间中的一个缓冲区相映射。于是当从缓冲区中取数据，就相当于读文件中的相应字节。于此类似，将数据存入缓冲区，则相应的字节就自动写入文件。这样，就可在不适用read和write函数的情况下，使用地址（指针）完成I/O操作。<br>使用存储映射这种方法，首先应通知内核，将一个指定文件映射到存储区域中。这个映射工作可以通过mmap函数来实现。</p>
 <p><strong>Mmap映射:</strong></p>
-<p><img src="/.com//assets%5C1562232612771.png" alt="1562232612771"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562232612771.png" alt="1562232612771"></p>
 <h3 id="7-2-mmap使用"><a href="#7-2-mmap使用" class="headerlink" title="7.2 mmap使用"></a>7.2 mmap使用</h3><p>建立映射区:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">mmap</span><span class="params">(<span class="keyword">void</span> *addr, <span class="keyword">size_t</span> length, <span class="keyword">int</span> prot, <span class="keyword">int</span> flags,</span></span></span><br><span class="line"><span class="function"><span class="params">                  <span class="keyword">int</span> fd, <span class="keyword">off_t</span> offset)</span></span>;</span><br><span class="line">addr 地址，填<span class="literal">NULL</span> </span><br><span class="line">length 长度 要申请的映射区的长度</span><br><span class="line">prot 权限</span><br><span class="line">PROT_READ 可读</span><br><span class="line">PROT_WRITE 可写</span><br><span class="line">flags 标志位</span><br><span class="line">MAP_SHARED 共享的 -- 对映射区的修改会影响源文件</span><br><span class="line">MAP_PRIVATE 私有的 </span><br><span class="line">fd 文件描述符 需要打开一个文件</span><br><span class="line">offset  指定一个偏移位置 ，从该位置开始映射 </span><br><span class="line">返回值</span><br><span class="line">成功 返回映射区的首地址</span><br><span class="line">失败 返回 MAP_FAILED ((<span class="keyword">void</span> *) <span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
 
@@ -868,7 +868,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <h2 id="8-linux进程间通信之共享内存"><a href="#8-linux进程间通信之共享内存" class="headerlink" title="8 linux进程间通信之共享内存"></a>8 linux进程间通信之共享内存</h2><h4 id="8-1-共享内存原理"><a href="#8-1-共享内存原理" class="headerlink" title="8.1 共享内存原理"></a>8.1 共享内存原理</h4><p>共享内存允许两个或者多个进程共享给定的存储区域。<br>共享内存的特点<br>1、共享内存是进程间共享数据的一种最快的方法。<br>        一个进程向共享的内存区域写入了数据，共享这个内存区域的所有进程就可以立刻看到其中的内容。<br>2、使用共享内存要注意的是多个进程之间对一个给定存储区访问的互斥。<br>        若一个进程正在向共享内存区写数据，则在它做完这一步操作前，别的进程不应当去读、写这些数据。</p>
 <p><strong>共享内存示意图:</strong></p>
-<p><img src="/.com//assets%5C1562232892227.png" alt="1562232892227"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562232892227.png" alt="1562232892227"></p>
 <p>在ubuntu 部分版本中共享内存限制值如下<br>共享存储区的最小字节数：1<br>共享存储区的最大字节数：32M<br>共享存储区的最大个数：4096<br>每个进程最多能映射的共享存储区的个数：4096</p>
 <h4 id="8-2-共享内存的创建和使用"><a href="#8-2-共享内存的创建和使用" class="headerlink" title="8.2 共享内存的创建和使用"></a>8.2 共享内存的创建和使用</h4><p>获得一个共享存储标识符</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/ipc.h&gt;</span></span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/shm.h&gt;</span></span></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">shmget</span><span class="params">(<span class="keyword">key_t</span> key, <span class="keyword">size_t</span> <span class="built_in">size</span>,<span class="keyword">int</span> shmflg)</span></span>;</span><br><span class="line">	功能:创建或打开一块共享内存区</span><br><span class="line">	参数：</span><br><span class="line">	    key：IPC键值</span><br><span class="line">	    <span class="built_in">size</span>：该共享存储段的长度(字节)</span><br><span class="line">	    shmflg：标识函数的行为及共享内存的权限。</span><br><span class="line">参数:</span><br><span class="line">shmflg：</span><br><span class="line">		IPC_CREAT：如果不存在就创建</span><br><span class="line">		IPC_EXCL：如果已经存在则返回失败</span><br><span class="line">		位或权限位：共享内存位或权限位后可以设置共享内存的访问权限，格式和<span class="built_in">open</span>函数的<span class="keyword">mode_t</span>一样，但可执行权限未使用。</span><br><span class="line">返回值:</span><br><span class="line">成功：返回共享内存标识符。</span><br><span class="line">失败：返回－<span class="number">1</span>。</span><br></pre></td></tr></table></figure>
@@ -887,11 +887,11 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <h2 id="9-linux进程间通信之信号"><a href="#9-linux进程间通信之信号" class="headerlink" title="9 linux进程间通信之信号"></a>9 linux进程间通信之信号</h2><h3 id="9-1-信号概述"><a href="#9-1-信号概述" class="headerlink" title="9.1 信号概述"></a>9.1 信号概述</h3><p><strong>信号的概念</strong><br>信号是 Linux 进程间通信的最古老的方式。信号是软件中断，它是在软件层次上对中断机制的一种模拟，是一种异步通信的方式 。信号可以导致一个正在运行的进程被另一个正在运行的异步进程中断，转而处理某一个突发事件。<br>“中断”在我们生活中经常遇到，譬如，我正在房间里打游戏，突然送快递的来了，把正在玩游戏的我给“中断”了，我去签收快递( 处理中断 )，处理完成后，再继续玩我的游戏。<br>这里我们学习的“信号”就是属于这么一种“中断”。我们在终端上敲“Ctrl+c”，就产生一个“中断”，相当于产生一个信号，接着就会处理这么一个“中断任务”（默认的处理方式为中断当前进程）。</p>
 <p><strong>信号的特点</strong><br>简单<br>不能携带大量信息<br>满足某个特设条件才发送</p>
 <p>信号可以直接进行用户空间进程和内核空间进程的交互，内核进程可以利用它来通知用户空间进程发生了哪些系统事件。<br>一个完整的信号周期包括三个部分：信号的产生，信号在进程中的注册，信号在进程中的注销，执行信号处理函数。如下图所示：</p>
-<p><img src="/.com//assets%5C1562235714540.png" alt="1562235714540"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562235714540.png" alt="1562235714540"></p>
 <p>注意：这里信号的产生，注册，注销时信号的内部机制，而不是信号的函数实现。 </p>
 <p><strong>信号的编号</strong></p>
 <p>Unix早期版本就提供了信号机制，但不可靠，信号可能丢失。Berkeley 和 AT&amp;T都对信号模型做了更改，增加了可靠信号机制。但彼此不兼容。POSIX.1对可靠信号例程进行了标准化。<br>Linux 可使用命令：kill -l（”l” 为字母），查看相应的信号。</p>
-<p><img src="/.com//assets%5C1562235818789.png" alt="1562235818789"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562235818789.png" alt="1562235818789"></p>
 <p>不存在编号为0的信号。其中1-31号信号称之为常规信号（也叫普通信号或标准信号），34-64称之为实时信号，驱动编程与硬件相关。名字上区别不大。而前32个名字各不相同。 </p>
 <p><strong>Linux常规信号一览表 :</strong></p>
 <table>
@@ -1098,7 +1098,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 </tbody></table>
 <p><strong>信号的四要素</strong></p>
 <p>每个信号必备4要素，分别是：<br>1）编号 2）名称 3）事件 4）默认处理动作<br>可通过man 7 signal查看帮助文档获取：</p>
-<p><img src="/.com//assets%5C1562235949570.png" alt="1562235949570"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562235949570.png" alt="1562235949570"></p>
 <p>在标准信号中，有一些信号是有三个“Value”，第一个值通常对alpha和sparc架构有效，中间值针对x86、arm和其他架构，最后一个应用于mips架构。一个‘-’表示在对应架构上尚未定义该信号。<br>不同的操作系统定义了不同的系统信号。因此有些信号出现在Unix系统内，也出现在Linux中，而有的信号出现在FreeBSD或Mac OS中却没有出现在Linux下。这里我们只研究Linux系统中的信号。</p>
 <p>Action为默认动作：<br>Term：终止进程<br>Ign： 忽略信号 (默认即时对该种信号忽略操作)<br>Core：终止进程，生成Core文件。(查验死亡原因，用于gdb调试)<br>Stop：停止（暂停）进程<br>Cont：继续运行进程<br>注意通过man 7 signal命令查看帮助文档，其中可看到 : The signals SIGKILL and SIGSTOP cannot be caught, blocked, or ignored.<br>这里特别强调了9) SIGKILL 和19) SIGSTOP信号，不允许忽略和捕捉，只能执行默认动作。甚至不能将其设置为阻塞。<br>另外需清楚，只有每个信号所对应的事件发生了，该信号才会被递送(但不一定递达)，不应乱发信号！！</p>
 <h3 id="9-2-信号的产生与动作"><a href="#9-2-信号的产生与动作" class="headerlink" title="9.2 信号的产生与动作"></a>9.2 信号的产生与动作</h3><p><strong>产生</strong><br>a) 当用户按某些终端键时，将产生信号。<br>终端上按“Ctrl+c”组合键通常产生中断信号 SIGINT<br>终端上按“Ctrl+\”键通常产生中断信号 SIGQUIT<br>终端上按“Ctrl+z”键通常产生中断信号 SIGSTOP 等。<br>b) 硬件异常将产生信号。<br>除数为 0，无效的内存访问等。这些情况通常由硬件检测到，并通知内核，然后内核产生适当的信号发送给相应的进程。<br>c) 软件异常将产生信号。<br>当检测到某种软件条件已发生(如：定时器alarm)，并将其通知有关进程时，产生信号。<br>d) 调用系统函数(如：kill、raise、abort)将发送信号。<br>注意：接收信号进程和发送信号进程的所有者必须相同，或发送信号进程的所有者必须是超级用户。<br>e) 运行 kill /killall命令将发送信号。<br>此程序实际上是使用 kill 函数来发送信号。也常用此命令终止一个失控的后台进程。</p>
@@ -1133,7 +1133,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <h3 id="9-5-修改信号的处理动作"><a href="#9-5-修改信号的处理动作" class="headerlink" title="9.5 修改信号的处理动作"></a>9.5 修改信号的处理动作</h3><p><strong>9.6.1 信号处理方式</strong><br>一个进程收到一个信号的时候，可以用如下方法进行处理：<br>1）执行系统默认动作<br>对大多数信号来说，系统默认动作是用来终止该进程。<br>2）忽略此信号(丢弃)<br>接收到此信号后没有任何动作。<br>3）执行自定义信号处理函数(捕获)<br>用用户定义的信号处理函数处理该信号。<br>【注意】：SIGKILL 和 SIGSTOP 不能更改信号的处理方式，因为它们向用户提供了一种使进程终止的可靠方法。</p>
 <p>内核实现信号捕捉过程： </p>
-<p><img src="/.com//assets%5C1562237717322.png" alt="1562237717322"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562237717322.png" alt="1562237717322"></p>
 <p>捕捉信号并且信号信号的处理方式有两个函数,signal 和sigaction</p>
 <p><strong>9.6.2 signal函数</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span><span class="params">(*<span class="keyword">sighandler_t</span>)</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="keyword">sighandler_t</span> signal(<span class="keyword">int</span> signum, <span class="keyword">sighandler_t</span> handler);</span><br><span class="line">功能：</span><br><span class="line">    注册信号处理函数（不可用于 SIGKILL、SIGSTOP 信号），即确定收到信号后处理函数的入口地址。此函数不会阻塞。</span><br><span class="line">参数：</span><br><span class="line">    signum：信号的编号，这里可以填数字编号，也可以填信号的宏定义，可以通过命令 kill - l(<span class="string">"l"</span> 为字母)进行相应查看。</span><br><span class="line">    handler : 取值有 <span class="number">3</span> 种情况：</span><br><span class="line">          SIG_IGN：忽略该信号</span><br><span class="line">          SIG_DFL：执行系统默认动作</span><br><span class="line">          信号处理函数名：自定义信号处理函数，如：func</span><br><span class="line">          回调函数的定义如下：</span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> signo)</span></span></span><br><span class="line"><span class="function">            </span>&#123;</span><br><span class="line">                <span class="comment">// signo 为触发的信号，为 signal() 第一个参数的值</span></span><br><span class="line">            &#125;</span><br><span class="line">返回值：</span><br><span class="line">    成功：第一次返回 <span class="literal">NULL</span>，下一次返回此信号上一次注册的信号处理函数的地址。如果需要使用此返回值，必须在前面先声明此函数指针的类型。</span><br><span class="line">    失败：返回 SIG_ERR</span><br></pre></td></tr></table></figure>
@@ -1156,7 +1156,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <h3 id="9-6-信号集"><a href="#9-6-信号集" class="headerlink" title="9.6 信号集"></a>9.6 信号集</h3><p><strong>9.6.1 信号集概述</strong></p>
 <p>在PCB中有两个非常重要的信号集。一个称之为“阻塞信号集”，另一个称之为“未决信号集”。<br>这两个信号集都是内核使用位图机制来实现的。但操作系统不允许我们直接对其进行位操作。而需自定义另外一个集合，借助信号集操作函数来对PCB中的这两个信号集进行修改。</p>
-<p><img src="/.com//assets%5C1562238388218.png" alt="1562238388218"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562238388218.png" alt="1562238388218"></p>
 <p><strong>9.6.2自定义信号集函数</strong></p>
 <p>为了方便对多个信号进行处理，一个用户进程常常需要对多个信号做出处理，在 Linux 系统中引入了信号集（信号的集合）。<br>这个信号集有点类似于我们的 QQ 群，一个个的信号相当于 QQ 群里的一个个好友。<br>信号集是一个能表示多个信号的数据类型，sigset_t set，set即一个信号集。既然是一个集合，就需要对集合进行添加/删除等操作。<br>相关函数说明如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;signal.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sigemptyset</span><span class="params">(<span class="keyword">sigset_t</span> *<span class="built_in">set</span>)</span></span>;       <span class="comment">//将set集合置空</span></span><br><span class="line">int sigfillset(sigset_t *set)；          //将所有信号加入set集合</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sigaddset</span><span class="params">(<span class="keyword">sigset_t</span> *<span class="built_in">set</span>, <span class="keyword">int</span> signo)</span></span>;  <span class="comment">//将signo信号加入到set集合</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sigdelset</span><span class="params">(<span class="keyword">sigset_t</span> *<span class="built_in">set</span>, <span class="keyword">int</span> signo)</span></span>;   <span class="comment">//从set集合中移除signo信号</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sigismember</span><span class="params">(<span class="keyword">const</span> <span class="keyword">sigset_t</span> *<span class="built_in">set</span>, <span class="keyword">int</span> signo)</span></span>; <span class="comment">//判断信号是否存在</span></span><br></pre></td></tr></table></figure>
@@ -1184,7 +1184,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 
 <h2 id="10-linux多任务编程之线程"><a href="#10-linux多任务编程之线程" class="headerlink" title="10 linux多任务编程之线程"></a>10 linux多任务编程之线程</h2><h3 id="10-1-线程概述"><a href="#10-1-线程概述" class="headerlink" title="10.1 线程概述"></a>10.1 线程概述</h3><p>在许多经典的操作系统教科书中，总是把进程定义为程序的执行实例，它并不执行什么, 只是维护应用程序所需的各种资源，而线程则是真正的执行实体。<br>所以，线程是轻量级的进程（LWP：light weight process），在Linux环境下线程的本质仍是进程。<br>为了让进程完成一定的工作，进程必须至少包含一个线程。</p>
-<p><img src="/.com//assets%5C1562239158898.png" alt="1562239158898"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562239158898.png" alt="1562239158898"></p>
 <p>进程，直观点说，保存在硬盘上的程序运行以后，会在内存空间里形成一个独立的内存体，这个内存体有自己的地址空间，有自己的堆，上级挂靠单位是操作系统。操作系统会以进程为单位，分配系统资源，所以我们也说，进程是CPU分配资源的最小单位。<br>线程存在与进程当中(进程可以认为是线程的容器)，是操作系统调度执行的最小单位。说通俗点，线程就是干活的。<br>进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的一个独立单位。<br>线程是进程的一个实体，是 CPU 调度和分派的基本单位，它是比进程更小的能独立运行的基本单位。线程自己基本上不拥有系统资源，只拥有一点在运行中必不可少的资源（如程序计数器，一组寄存器和栈），但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。<br>如果说进程是一个资源管家，负责从主人那里要资源的话，那么线程就是干活的苦力。一个管家必须完成一项工作，就需要最少一个苦力，也就是说，一个进程最少包含一个线程，也可以包含多个线程。苦力要干活，就需要依托于管家，所以说一个线程，必须属于某一个进程。<br>进程有自己的地址空间，线程使用进程的地址空间，也就是说，进程里的资源，线程都是有权访问的，比如说堆啊，栈啊，静态存储区什么的。</p>
 <blockquote>
 <p>进程是操作系统分配资源的最小单位</p>
@@ -1204,7 +1204,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 <p>类Unix系统中，早期是没有“线程”概念的，80年代才引入，借助进程机制实现出了线程的概念。 </p>
 <p>因此在这类系统中，进程和线程关系密切：</p>
 <p>1) 线程是轻量级进程(light-weight process)，也有PCB，创建线程使用的底层函数和进程一样，都是clone<br>2) 从内核里看进程和线程是一样的，都有各自不同的PCB.<br>3) 进程可以蜕变成线程<br>4) 在linux下，线程最是小的执行单位；进程是最小的分配资源单位</p>
-<p><img src="/.com//assets%5C1562239440165.png" alt="1562239440165"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562239440165.png" alt="1562239440165"></p>
 <p>查看指定进程的LWP号：<br>ps  -Lf  pid<br>实际上，无论是创建进程的fork，还是创建线程的pthread_create，底层实现都是调用同一个内核函数 clone 。<br>Ø 如果复制对方的地址空间，那么就产出一个“进程”；<br>Ø 如果共享对方的地址空间，就产生一个“线程”。<br>Linux内核是不区分进程和线程的, 只在用户层面上进行区分。所以，线程所有操作函数 pthread_* 是库函数，而非系统调用。 </p>
 <p><strong>线程共享资源</strong></p>
 <p>1) 文件描述符表<br>2) 每种信号的处理方式<br>3) 当前工作目录<br>4) 用户ID和组ID<br>内存地址空间 (.text/.data/.bss/heap/共享库)</p>
@@ -1334,9 +1334,9 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
 
 <h3 id="11-6-信号量"><a href="#11-6-信号量" class="headerlink" title="11.6 信号量"></a>11.6 信号量</h3><p>信号量概述<br>信号量广泛用于进程或线程间的同步和互斥，信号量本质上是一个非负的整数计数器，它被用来控制对公共资源的访问。<br>编程时可根据操作信号量值的结果判断是否对公共资源具有访问的权限，当信号量值大于 0 时，则可以访问，否则将阻塞。<br>PV 原语是对信号量的操作，一次 P 操作使信号量减１，一次 V 操作使信号量加１。<br>信号量主要用于进程或线程间的同步和互斥这两种典型情况。<br>信号量数据类型为：sem_t。</p>
 <p>信号量用于互斥：</p>
-<p><img src="/.com//assets%5C1562242560834.png" alt="1562242560834"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562242560834.png" alt="1562242560834"></p>
 <p>信号量用于同步:</p>
-<p><img src="/.com//assets%5C1562242592554.png" alt="1562242592554"></p>
+<p><img src="/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/assets%5C1562242592554.png" alt="1562242592554"></p>
 <p><strong>初始化信号量:</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;semaphore.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sem_init</span><span class="params">(<span class="keyword">sem_t</span> *sem, <span class="keyword">int</span> pshared, <span class="keyword">unsigned</span> <span class="keyword">int</span> value)</span></span></span><br><span class="line">功能：</span><br><span class="line">    创建一个信号量并初始化它的值。一个无名信号量在被使用前必须先初始化。</span><br><span class="line">参数：</span><br><span class="line">    sem：信号量的地址</span><br><span class="line">    pshared：等于 <span class="number">0</span>，信号量在线程间共享（常用）；不等于<span class="number">0</span>，信号量在进程间共享。</span><br><span class="line">    value：信号量的初始值</span><br><span class="line">返回值：</span><br><span class="line">    成功：<span class="number">0</span></span><br><span class="line">    失败： - <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
@@ -1362,7 +1362,7 @@ done</code></pre><p>这种方式与while恰恰相反，当condition成立的时�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" data-id="ck2lmxfdn0003s0ue66bdhhyy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/03/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" data-id="ck2lqr38k00030gue1cu56fzh" class="article-share-link">Share</a>
       
       
     </footer>
